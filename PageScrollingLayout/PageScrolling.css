@@ -1,0 +1,104 @@
+﻿html body {
+  margin: 0;
+}
+html body .page-scrolling-layout > .outer-container-wrap > .outer-container > header {
+  height: 10rem;
+}
+html body .page-scrolling-layout > .outer-container-wrap > .outer-container > .inner-container-wrap > .inner-container > .content-wrap > .menu-wrap {
+  display: none;
+}
+html body .page-scrolling-layout > .outer-container-wrap > .outer-container > .inner-container-wrap > .inner-container footer {
+  height: 10rem;
+}
+@media only screen and (min-width: 480px) {
+  html {
+    height: 100%;
+  }
+  html body {
+    height: 100%;
+  }
+  html body .page-scrolling-layout {
+    height: 100%;
+  }
+  html body .page-scrolling-layout > .outer-container-wrap {
+    height: 100%;
+    overflow: hidden;
+  }
+  html body .page-scrolling-layout > .outer-container-wrap > .outer-container {
+    height: 100%;
+    position: relative;
+    top: -10rem;
+    -moz-transition: top 0.5s ease-in-out;
+    -o-transition: top 0.5s ease-in-out;
+    -webkit-transition: top 0.5s ease-in-out;
+    transition: top 0.5s ease-in-out;
+  }
+  html body .page-scrolling-layout > .outer-container-wrap > .outer-container.show-header {
+    top: 0;
+  }
+  html body .page-scrolling-layout > .outer-container-wrap > .outer-container > .inner-container-wrap {
+    height: 100%;
+    overflow: hidden;
+  }
+  html body .page-scrolling-layout > .outer-container-wrap > .outer-container > .inner-container-wrap > .inner-container {
+    height: 100%;
+    position: relative;
+    top: 0;
+    -moz-transition: top 0.5s ease-in-out;
+    -o-transition: top 0.5s ease-in-out;
+    -webkit-transition: top 0.5s ease-in-out;
+    transition: top 0.5s ease-in-out;
+  }
+  html body .page-scrolling-layout > .outer-container-wrap > .outer-container > .inner-container-wrap > .inner-container.show-footer {
+    top: -10rem;
+  }
+  html body .page-scrolling-layout > .outer-container-wrap > .outer-container > .inner-container-wrap > .inner-container > .content-wrap {
+    height: 100%;
+    overflow: hidden;
+  }
+  html body .page-scrolling-layout > .outer-container-wrap > .outer-container > .inner-container-wrap > .inner-container > .content-wrap > .content {
+    height: 100%;
+    position: relative;
+    top: 0;
+  }
+  html body .page-scrolling-layout > .outer-container-wrap > .outer-container > .inner-container-wrap > .inner-container > .content-wrap > .content.animated {
+    -moz-transition: top 0.8s ease-in-out;
+    -o-transition: top 0.8s ease-in-out;
+    -webkit-transition: top 0.8s ease-in-out;
+    transition: top 0.8s ease-in-out;
+  }
+  html body .page-scrolling-layout > .outer-container-wrap > .outer-container > .inner-container-wrap > .inner-container > .content-wrap > .content > .page {
+    height: 100%;
+    overflow: hidden;
+  }
+  html body .page-scrolling-layout > .outer-container-wrap > .outer-container > .inner-container-wrap > .inner-container > .content-wrap > .content > .page.scrollable {
+    overflow-y: scroll;
+    margin-right: -17px;
+  }
+  html body .page-scrolling-layout > .outer-container-wrap > .outer-container > .inner-container-wrap > .inner-container > .content-wrap > .menu-wrap {
+    display: block;
+    height: 100%;
+    width: 5rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  html body .page-scrolling-layout > .outer-container-wrap > .outer-container > .inner-container-wrap > .inner-container > .content-wrap > .menu-wrap > .menu {
+    position: relative;
+    top: 50%;
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+}
+.align-center-vertical {
+  top: 50%;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+/*# sourceMappingURL=PageScrolling.css.map */

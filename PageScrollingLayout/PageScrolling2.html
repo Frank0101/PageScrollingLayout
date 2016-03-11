@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Page Scrolling 2</title>
+    <link href="PageScrolling.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="page-scrolling-layout">
+        <div class="outer-container-wrap">
+            <div class="outer-container">
+                <header>
+                    <div style="height:100%; background-color: yellowgreen">
+                        HEADER
+                    </div>
+                </header>
+                <div class="inner-container-wrap">
+                    <div class="inner-container">
+                        <div class="content-wrap">
+                            <div class="content">
+                                <div class="page">
+                                    <div style="height:100%; min-height:20rem; background-color: green">
+                                        CONTENT
+                                    </div>
+                                </div>
+                                <div class="page scrollable">
+                                    <div style="height:100%; min-height:20rem; background-color: blue">
+                                        SUB CONTENT
+                                    </div>
+                                    <div style="height:100%; min-height:20rem; background-color: red">
+                                        SUB CONTENT
+                                    </div>
+                                    <div style="height:100%; min-height:20rem; background-color: yellow">
+                                        SUB CONTENT
+                                    </div>
+                                    <footer>
+                                        <div style="height:100%; background-color: yellowgreen">
+                                            FOOTER
+                                        </div>
+                                    </footer>
+                                </div>
+                            </div>
+                            <div class="menu-wrap">
+                                <div class="menu">
+                                    <div style="height:8rem; padding: 1rem; background-color: orangered">
+                                        <a href="#" data-page-index="0" style="font-weight: bold">Green</a>
+                                        <br />
+                                        <a href="#" data-page-index="1">Scroll</a>
+                                        <br />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="Scripts/jquery-2.1.4.min.js"></script>
+    <script src="Scripts/modernizr-2.8.3.js"></script>
+    <script src="PageScrolling.min.js"></script>
+    <script>
+        window.pageScrollingLayoutAPI.pageChangedCallback = function (index) {
+            $(".menu a").css("font-weight", "");
+            $(".menu a[data-page-index=" + index + "]").css("font-weight", "bold");
+        };
+        $(".menu a").on("click", function (event) {
+            var pageIndex = $(event.target).data("page-index");
+            window.pageScrollingLayoutAPI.setCurrentPage(pageIndex);
+        });
+    </script>
+</body>
+</html>
